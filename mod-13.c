@@ -28,8 +28,7 @@
 //     return 0;
 // }
 
-
-// ! sum of two value answer is x 
+// ! sum of two value answer is x
 #include <stdio.h>
 
 int main()
@@ -43,25 +42,36 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    int x ;
-    scanf("%d",&x);
+    int x;
+    scanf("%d", &x);
     int value1;
     int value2;
+    int flag = 0;
     for (int i = 0; i < n; i++)
     {
-        for (int j =i+ 1; j <= n; j++)
+        for (int j = i + 1; j <= n; j++)
         {
             /* code */
             if (arr[i] + arr[j] == x)
             {
                 /* code */
-                // printf("%d %d",arr[j],arr[i]);
                 value1 = arr[i];
                 value2 = arr[j];
+                flag = 1;
+                printf("Yes\n");
             }
         }
     }
-    printf("%d %d",value1,value2);
+
+    if (flag == 0)
+    {
+        printf("No\n");
+    }
+    else
+    {
+
+        printf("%d %d \n", value1, value2);
+    }
 
     return 0;
 }
