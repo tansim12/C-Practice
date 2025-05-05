@@ -43,18 +43,21 @@ int main()
         scanf("%d", &arr[i]);
     }
 
+    int x ;
+    scanf("%d",&x);
     int value1;
     int value2;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j <= n; j++)
+        for (int j =i+ 1; j <= n; j++)
         {
             /* code */
-            if (arr[i] + arr[j] == 8)
+            if (arr[i] + arr[j] == x)
             {
                 /* code */
-                value1 = arr[j];
-                value2 = arr[i];
+                // printf("%d %d",arr[j],arr[i]);
+                value1 = arr[i];
+                value2 = arr[j];
             }
         }
     }
