@@ -194,6 +194,48 @@
 //  ***
 //   **
 //    *
+// #include <stdio.h>
+
+// int main()
+// {
+//     int n;
+//     scanf("%d",&n);
+//     int star = n;
+//     int space = 0;
+//     for (int i = n; i >=1; i--)
+//     {
+//         for (int s = 1; s <=space ; s++)
+//         {
+//             /* code */
+//             printf(" ");
+//         }
+        
+//         /* code */
+//         for (int j = star; j >=1; j--)
+//         {
+//             /* code */
+//             printf("*");
+//         }
+//         printf("\n");
+//         star--;
+//         space++;
+
+        
+//     }
+    
+//     return 0;
+// }
+
+
+
+
+
+// ! 
+// E D C B A 
+//  D C B A 
+//   C B A 
+//    B A 
+//     A 
 #include <stdio.h>
 
 int main()
@@ -214,7 +256,7 @@ int main()
         for (int j = star; j >=1; j--)
         {
             /* code */
-            printf("*");
+            printf("%c ", j+64);
         }
         printf("\n");
         star--;
