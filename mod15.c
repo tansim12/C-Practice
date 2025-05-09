@@ -49,27 +49,54 @@
 
 
 // ! array parameter pass by reference 
+// #include <stdio.h>
+
+// void fn(int arr[])
+// {
+//     arr[0] = 100000;
+// }
+
+// int main()
+// {
+//     int arr[5] = {10, 2, 6, 9, 3};
+//     // printf("0 index -> %p\n",&arr[0]);
+//     // printf("1 index -> %p\n",&arr[1]);
+//     // printf("2 index -> %p\n",&arr[2]);
+//     // printf("3 index -> %p\n",&arr[3]);
+
+//     fn(arr);
+    
+//     for (int i = 0; i < 5; i++)
+//     {
+//         /* code */
+//         printf("%d ",arr[i]);
+//     }
+    
+//     return 0;
+// }
+
+
 #include <stdio.h>
 
-void fn(int arr[])
+void fn(char str[])
 {
-    arr[0] = 100000;
+    str[0] = 'x';
 }
 
 int main()
 {
-    int arr[5] = {10, 2, 6, 9, 3};
+    char str[5] = "abcde";
     // printf("0 index -> %p\n",&arr[0]);
     // printf("1 index -> %p\n",&arr[1]);
     // printf("2 index -> %p\n",&arr[2]);
     // printf("3 index -> %p\n",&arr[3]);
 
-    fn(arr);
+    fn(str);
     
     for (int i = 0; i < 5; i++)
     {
         /* code */
-        printf("%d ",arr[i]);
+        printf("%c ",str[i]);
     }
     
     return 0;
