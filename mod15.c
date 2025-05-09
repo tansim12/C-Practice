@@ -76,28 +76,42 @@
 // }
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void fn(char str[])
-{
-    str[0] = 'x';
-}
+// void fn(char str[])
+// {
+//     str[0] = 'x';
+// }
+
+// int main()
+// {
+//     char str[5] = "abcde";
+//     // printf("0 index -> %p\n",&arr[0]);
+//     // printf("1 index -> %p\n",&arr[1]);
+//     // printf("2 index -> %p\n",&arr[2]);
+//     // printf("3 index -> %p\n",&arr[3]);
+
+//     fn(str);
+    
+//     for (int i = 0; i < 5; i++)
+//     {
+//         /* code */
+//         printf("%c ",str[i]);
+//     }
+    
+//     return 0;
+// }
+
+
+#include <stdio.h>
 
 int main()
 {
-    char str[5] = "abcde";
-    // printf("0 index -> %p\n",&arr[0]);
-    // printf("1 index -> %p\n",&arr[1]);
-    // printf("2 index -> %p\n",&arr[2]);
-    // printf("3 index -> %p\n",&arr[3]);
+    int arr[4] = {1,2,3,4};
 
-    fn(str);
-    
-    for (int i = 0; i < 5; i++)
-    {
-        /* code */
-        printf("%c ",str[i]);
-    }
-    
+    int* p ;
+    p = arr+3;
+    *p = 5;
+  printf("%d",arr[3]);
     return 0;
 }
