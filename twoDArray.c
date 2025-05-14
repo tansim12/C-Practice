@@ -69,114 +69,165 @@
 //     return 0;
 // }
 
+//! diagonal , zero , row, column  matrix
+// #include <stdio.h>
+
+// int main()
+// {
+//     // int arr[2][3] = {{2, 3, 5}, {3, 10, 9}};
+
+//     int r, c;
+//     scanf("%d %d", &r, &c);
+//     int arr[r][c];
+//     for (int i = 0; i < r; i++)
+//     {
+
+//         for (int j = 0; j < c; j++)
+//         {
+//             scanf("%d", &arr[i][j]);
+//         }
+//     }
+
+//     if (r == 1)
+//     {
+//         /* code */
+//         printf("Row matrix");
+//     }
+//     else
+//     {
+//         printf("Row matrix na");
+//     }
+
+//     printf("\n");
+
+//     if (c == 1)
+//     {
+//         /* code */
+//         printf("Column matrix");
+//     }
+//     else
+//     {
+//         printf("Column matrix na");
+//     }
+
+//     printf("\n");
+
+//     int isZeroMatrix = 0;
+//     for (int i = 0; i < r; i++)
+//     {
+
+//         for (int j = 0; j < c; j++)
+//         {
+//             if (arr[i][j] != 0)
+//             {
+//                 /* code */
+//                 isZeroMatrix = 1;
+//             }
+//         }
+//     }
+//     if (isZeroMatrix == 0)
+//     {
+//         /* code */
+//         printf("Zero Matrix");
+//     }
+//     else
+//     {
+//         printf("Zero Matrix na");
+//     }
+//     printf("\n");
+
+//     // diagonal matrix
+
+//     int isDiagonalCount = 0;
+//     if (r == c)
+//     {
+//         for (int i = 0; i < r; i++)
+//         {
+
+//             for (int j = 0; j < c; j++)
+//             {
+//                 if (i == j)
+//                 {
+//                     // diagonal value print here
+//                 }
+//                 else
+//                 {
+//                     // outside of diagonal
+//                     if (arr[i][j] != 0)
+//                     {
+//                         /* code */
+//                         isDiagonalCount++;
+//                     }
+//                 }
+//             }
+//             printf("\n");
+//         }
+
+//         if (isDiagonalCount ==0)
+//         {
+//             /* code */
+//             printf("Diagonal Matrix");
+//         }
+//         else
+//         {
+//             printf("Diagonal Matrix na");
+//             /* code */
+//         }
+
+//     }
+//     else
+//     {
+//         printf("Diagonal Matrix na");
+//     }
+
+//     return 0;
+// }
+
+
+// ! Secondary Diagonal matrix
 #include <stdio.h>
 
 int main()
 {
-    // int arr[2][3] = {{2, 3, 5}, {3, 10, 9}};
-
     int r, c;
     scanf("%d %d", &r, &c);
     int arr[r][c];
     for (int i = 0; i < r; i++)
     {
-
+        /* code */
         for (int j = 0; j < c; j++)
         {
+            /* code */
             scanf("%d", &arr[i][j]);
         }
     }
 
-    if (r == 1)
-    {
-        /* code */
-        printf("Row matrix");
-    }
-    else
-    {
-        printf("Row matrix na");
-    }
-
-    printf("\n");
-
-    if (c == 1)
-    {
-        /* code */
-        printf("Column matrix");
-    }
-    else
-    {
-        printf("Column matrix na");
-    }
-
-    printf("\n");
-
-    int isZeroMatrix = 0;
-    for (int i = 0; i < r; i++)
-    {
-
-        for (int j = 0; j < c; j++)
-        {
-            if (arr[i][j] != 0)
-            {
-                /* code */
-                isZeroMatrix = 1;
-            }
-        }
-    }
-    if (isZeroMatrix == 0)
-    {
-        /* code */
-        printf("Zero Matrix");
-    }
-    else
-    {
-        printf("Zero Matrix na");
-    }
-    printf("\n");
-
-    // diagonal matrix
-
-    int isDiagonalCount = 0;
     if (r == c)
     {
         for (int i = 0; i < r; i++)
         {
-
+            /* code */
             for (int j = 0; j < c; j++)
             {
-                if (i == j)
+          
+                if (i + j == r-1)
                 {
-                    // diagonal value print here    
+                    // secendray diagonal
                 }
                 else
                 {
-                    // outside of diagonal
                     if (arr[i][j] != 0)
                     {
                         /* code */
-                        isDiagonalCount++;
+                        printf("Secendray Diagonal na\n");
                     }
                 }
             }
-            printf("\n");
         }
-
-        if (isDiagonalCount ==0)
-        {
-            /* code */
-            printf("Diagonal Matrix");
-        }
-        else
-        {
-            printf("Diagonal Matrix na");
-            /* code */
-        }
-        
     }
     else
     {
-        printf("Diagonal Matrix na");
+        printf("Secendray Diagonal na\n");
     }
 
     return 0;
