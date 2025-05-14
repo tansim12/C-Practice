@@ -17,7 +17,7 @@ int main()
         }
     }
 
-        for (int i = 0; i < r; i++)
+    for (int i = 0; i < r; i++)
     {
 
         for (int j = 0; j < c; j++)
@@ -27,6 +27,5 @@ int main()
         printf("\n");
     }
 
-    
     return 0;
 }
