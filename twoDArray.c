@@ -183,8 +183,7 @@
 //     return 0;
 // }
 
-
-// ! Secondary Diagonal matrix
+// ! Secondary Diagonal matrix + scaler diagonal
 #include <stdio.h>
 
 int main()
@@ -202,32 +201,48 @@ int main()
         }
     }
 
-    if (r == c)
+    if (r != c)
     {
-        for (int i = 0; i < r; i++)
+        printf("Secendray Diagonal na\n");
+    }
+
+    int isScalerCount = 0;
+    int scalerValue = arr[0][r - 1];
+
+    for (int i = 0; i < r; i++)
+    {
+        /* code */
+        for (int j = 0; j < c; j++)
         {
-            /* code */
-            for (int j = 0; j < c; j++)
+
+            if (i + j == r - 1)
             {
-          
-                if (i + j == r-1)
+
+                // secondary diagonal + scalar matrix
+                if (arr[i][j] != scalerValue)
                 {
-                    // secendray diagonal
+                    isScalerCount++;
                 }
-                else
+            }
+            else
+            {
+                if (arr[i][j] != 0)
                 {
-                    if (arr[i][j] != 0)
-                    {
-                        /* code */
-                        printf("Secendray Diagonal na\n");
-                    }
+                    /* code */
+                    isScalerCount++;
                 }
             }
         }
     }
+
+    if (isScalerCount == 0)
+    {
+        /* code */
+        printf("Scalar diagonal\n");
+    }
     else
     {
-        printf("Secendray Diagonal na\n");
+        printf("Scalar diagonal na\n");
     }
 
     return 0;
