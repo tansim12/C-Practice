@@ -1,1 +1,7 @@
-8 4 9 2 
+Row matrix na
+Column matrix na
+Zero Matrix na
+1 
+1 
+9 
+Diagonal Matrix
